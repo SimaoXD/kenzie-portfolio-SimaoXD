@@ -6,6 +6,7 @@ import { Button } from "@/styles/Buttons";
 // Components
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
+import { AboutMe } from "@/components/AboutMe";
 
 // Data
 import { stackData } from "@/utils/stackData";
@@ -24,7 +25,6 @@ import {
   ProjectAreaWrapperColumns,
 } from "./style";
 
-
 export const Home = (): JSX.Element => {
   return (
     <main>
@@ -35,8 +35,7 @@ export const Home = (): JSX.Element => {
               Criando experiências por meio da tecnologia{" "}
             </Text>
             <Text type="body1" color="grey6">
-              Sou estudante de programação na Kenzie Academy Brasil, participei
-              de diversos projetos resolvendo problemas de alto nível e
+              Sou estudante de programação na Kenzie Academy Brasil, participei de diversos projetos resolvendo problemas de alto nível e
               desenvolvendo habilidades
             </Text>
             <HeaderButtonsArea>
@@ -45,6 +44,9 @@ export const Home = (): JSX.Element => {
               </Button>
               <Button as="a" href="#tecnologias" type="btLink" color="grey5">
                 Tecnologias
+              </Button>
+              <Button as="a" href="#aboutme" type="btLink" color="grey5">
+                Sobre Mim
               </Button>
             </HeaderButtonsArea>
           </HeaderContent>
@@ -70,16 +72,10 @@ export const Home = (): JSX.Element => {
                 Vamos trocar uma ideia?
               </Text>
               <Text as="p" type="body1" color="grey2">
-                No linkedIn sempre estou compartilhando meus processos diários
-                para desenvolver esses projetos e estou disposto a trocar
+                No linkedIn sempre estou compartilhando meus processos diários para desenvolver esses projetos e estou disposto a trocar
                 algumas ideias por lá
               </Text>
-              <Button
-                type="primary"
-                target="_blank"
-                as="a"
-                href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
-              >
+              <Button type="primary" target="_blank" as="a" href={`https://www.linkedin.com/in/${userData.linkedinUser}`}>
                 Acessar perfil no LinkedIn
               </Button>
             </ProjectsAreaSocialMediaMessage>
@@ -99,6 +95,7 @@ export const Home = (): JSX.Element => {
           </ProjectAreaWrapperColumns>
         </Container>
       </ProjectsArea>
+      <AboutMe />
     </main>
   );
 };
